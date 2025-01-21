@@ -71,6 +71,31 @@ public:
     }
 };
 
+/*
+Complexity Analysis:
+
+1. Insert Operation:
+   - Time Complexity: O(L), where L is the length of the word being inserted.
+     - For each character in the word, we either traverse or create a new node in the Trie.
+   - Space Complexity: O(L), where L is the length of the word.
+     - Space is used to create new nodes in the Trie for each unique character in the word.
+
+2. Search Operation:
+   - Time Complexity: O(L), where L is the length of the word being searched.
+     - For each character in the word, we traverse the Trie nodes.
+   - Space Complexity: O(1), as no extra space is used during the search.
+
+3. startsWith Operation:
+   - Time Complexity: O(L), where L is the length of the prefix being checked.
+     - For each character in the prefix, we traverse the Trie nodes.
+   - Space Complexity: O(1), as no extra space is used during the prefix check.
+
+Overall:
+- Insert, search, and startsWith all have **linear time complexity** with respect to the length of the input string (word or prefix).
+- Space usage grows proportionally to the total number of unique characters stored across all inserted words.
+*/
+
+
 /**
  * Your Trie object will be instantiated and called as such:
  * Trie* obj = new Trie();
